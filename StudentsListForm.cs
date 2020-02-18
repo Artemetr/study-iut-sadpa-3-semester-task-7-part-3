@@ -46,7 +46,18 @@ namespace study_iut_sadpa_3_semester_task_7_part_3
 
         private void StudentsListForm_Load(object sender, EventArgs e)
         {
-            studentBindingSource.DataSource = StudentsListForm.LoadStudentsDataset(this.PathToCsvFile);
+            DataTable dt = new DataTable();
+            File.ReadLines(this.PathToCsvFile).Take(1)
+                .SelectMany(x => x.Split(new[] { ';' }, StringSplitOptions.RemoveEmptyEntries))
+                .ToList()
+                .ForEach(x => dt.Columns.Add(x.Trim()));
+
+            File.ReadLines(this.PathToCsvFile).Skip(1)
+                .Select(x => x.Split(';'))
+                .ToList()
+                .ForEach(line => dt.Rows.Add(line));
+
+            StudentsDataGridView.DataSource = dt;
         }
 
         private static List<Student> LoadStudentsDataset(string pathToCsvFile)

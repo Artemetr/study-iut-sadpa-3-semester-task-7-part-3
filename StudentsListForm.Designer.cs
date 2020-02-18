@@ -30,34 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             this.StudentsDataGridView = new System.Windows.Forms.DataGridView();
+            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.SaveStudentsDatasetToCsvButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.PathTextBox = new System.Windows.Forms.TextBox();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.secondNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.StudentsDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.studentBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // StudentsDataGridView
             // 
-            this.StudentsDataGridView.AutoGenerateColumns = false;
             this.StudentsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.groupIdDataGridViewTextBoxColumn,
-            this.lastNameDataGridViewTextBoxColumn,
-            this.firstNameDataGridViewTextBoxColumn,
-            this.secondNameDataGridViewTextBoxColumn});
-            this.StudentsDataGridView.DataSource = this.studentBindingSource;
             this.StudentsDataGridView.Location = new System.Drawing.Point(13, 13);
             this.StudentsDataGridView.Name = "StudentsDataGridView";
             this.StudentsDataGridView.Size = new System.Drawing.Size(775, 396);
             this.StudentsDataGridView.TabIndex = 0;
+            // 
+            // studentBindingSource
+            // 
+            this.studentBindingSource.DataSource = typeof(study_iut_sadpa_3_semester_task_7_part_3.Student);
             // 
             // SaveStudentsDatasetToCsvButton
             // 
@@ -85,40 +76,6 @@
             this.PathTextBox.Size = new System.Drawing.Size(184, 20);
             this.PathTextBox.TabIndex = 3;
             // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            // 
-            // groupIdDataGridViewTextBoxColumn
-            // 
-            this.groupIdDataGridViewTextBoxColumn.DataPropertyName = "GroupId";
-            this.groupIdDataGridViewTextBoxColumn.HeaderText = "GroupId";
-            this.groupIdDataGridViewTextBoxColumn.Name = "groupIdDataGridViewTextBoxColumn";
-            // 
-            // lastNameDataGridViewTextBoxColumn
-            // 
-            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
-            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
-            // 
-            // firstNameDataGridViewTextBoxColumn
-            // 
-            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
-            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
-            // 
-            // secondNameDataGridViewTextBoxColumn
-            // 
-            this.secondNameDataGridViewTextBoxColumn.DataPropertyName = "SecondName";
-            this.secondNameDataGridViewTextBoxColumn.HeaderText = "SecondName";
-            this.secondNameDataGridViewTextBoxColumn.Name = "secondNameDataGridViewTextBoxColumn";
-            // 
-            // studentBindingSource
-            // 
-            this.studentBindingSource.DataSource = typeof(study_iut_sadpa_3_semester_task_7_part_3.Student);
-            // 
             // StudentsListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -141,11 +98,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView StudentsDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groupIdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn secondNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource studentBindingSource;
         private System.Windows.Forms.Button SaveStudentsDatasetToCsvButton;
         private System.Windows.Forms.Button ExitButton;
