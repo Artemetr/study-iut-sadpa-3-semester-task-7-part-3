@@ -58,6 +58,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CsvParser.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="StudentsListForm.cs">
       <SubType>Form</SubType>
